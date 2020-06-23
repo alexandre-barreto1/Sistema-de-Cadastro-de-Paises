@@ -1,0 +1,19 @@
+<app-home-usuario></app-home-usuario>
+<mat-card-title>Digite um novo nome e sigla para o pais</mat-card-title>
+<form>
+  <mat-form-field>
+    <input matInput placeholder="Nome" [(ngModel)]="pais.nome"
+           name="name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Sigla</mat-label>
+    <input matInput placeholder="Sigla" [(ngModel)]="pais.sigla"
+           name="sigla">
+  </mat-form-field>
+
+  <button mat-raised-button (click)="updatePais()" color="primary">
+    Salvar
+  </button>
+</form>
+
+

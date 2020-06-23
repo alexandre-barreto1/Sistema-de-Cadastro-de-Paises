@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  max-width: 300px;
+  width: 100%;
+}
+h1{
+  background-color: lightgray;
+  min-width: 150px;
+  width: 100%;
+}
+button{
+  min-width: 50px;
+  max-width: 100px;
+}
+

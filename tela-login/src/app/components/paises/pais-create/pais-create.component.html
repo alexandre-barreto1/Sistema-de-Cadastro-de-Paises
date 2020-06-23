@@ -1,0 +1,19 @@
+<app-home-usuario></app-home-usuario>
+  <form>
+    <mat-card-title>Novo Pais</mat-card-title>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="pais.nome"
+             name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Sigla</mat-label>
+      <input matInput placeholder="Sigla" [(ngModel)]="pais.sigla"
+             name="sigla">
+    </mat-form-field>
+
+    <button mat-raised-button (click)="createPaises()" color="primary">
+      Salvar
+    </button>
+  </form>
+
+

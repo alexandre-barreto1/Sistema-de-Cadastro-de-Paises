@@ -1,0 +1,28 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+    <mat-nav-list>
+      <a mat-list-item class="nav-list" routerLink="/home/usuario">
+        <i class="material-icons">
+          home
+        </i>
+        Home
+      </a>
+      <a mat-list-item class="nav-list" routerLink="/paises/list">
+        <i class="material-icons">
+          language
+        </i>
+        Paises
+      </a>
+      <div class="adicionar-pais" *ngIf="ready">
+        <a mat-list-item class="nav-list" routerLink="/pais/create" >
+          <i class="material-icons">
+            add_location_alt
+          </i>
+          Adicionar Novo Pais
+        </a>
+      </div>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

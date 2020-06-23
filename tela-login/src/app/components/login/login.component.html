@@ -1,0 +1,18 @@
+<h1>
+  <mat-card-title>Sistema de Login</mat-card-title>
+</h1>
+<mat-card>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Usuario" [(ngModel)]="usuario.login"
+             name="usuario">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder ="Senha" [(ngModel)]="usuario.senha"
+             name="senha">
+    </mat-form-field>
+  </form>
+</mat-card>
+<button mat-raised-button (click)="login()" color="primary">
+  Entrar
+</button>
