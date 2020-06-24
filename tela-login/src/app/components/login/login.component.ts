@@ -16,14 +16,20 @@ export class LoginComponent implements OnInit {
     login: '',
     senha: '',
   };
+  hide = true;
   ngOnInit(): void {
   }
 
   login(){
     if (this.usuario.senha.length === 0 || this.usuario.login.length === 0){
       this.service.showMessage('O campo de nome ou senha está vazio', true);
+      return false;
     }
     this.service.login(this.usuario).subscribe(usuarioAutenticado => {
+      if (usuarioAutenticado.token === undefined){
+        this.service.showMessage('Usuario não encontrado', true);
+        return false;
+      }
       this.guard.usuarioModel(usuarioAutenticado);
       this.router.navigate((['home/usuario']));
     });

@@ -1,1 +1,8 @@
-
+.title-group{
+  display: flex;
+  align-items: left ;
+}
+.sair-button{
+  margin-left: 1180px;
+  position: fixed;
+}

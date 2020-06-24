@@ -13,10 +13,10 @@ export class HomeUsuarioComponent implements OnInit {
   constructor(private guard: AuthGuard) { }
   usuarioLogado: UsuarioAutentificacaoModel;
   ngOnInit(): void {
-    this.home();
+    this.usuarioLogado = this.guard.retonarUsuarioLogado();
   }
 
-  home(){
-    this.usuarioLogado = this.guard.retonarUsuarioLogado();
+  logout(): void{
+    this.guard.logout();
   }
   }

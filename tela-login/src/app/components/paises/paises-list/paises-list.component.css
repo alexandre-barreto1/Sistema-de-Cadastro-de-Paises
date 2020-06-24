@@ -1,14 +1,12 @@
 table {
   width: 81%;
-  margin-left: 250px;
-  align-items: center;
+  margin-left: 19%;
+  place-items: center;
+
 }
 .edit {
   margin-right: 10px;
 }
 .edit > i {
   color: #d9cd26;
-}
-.create {
-  margin-right: 10px;
 }

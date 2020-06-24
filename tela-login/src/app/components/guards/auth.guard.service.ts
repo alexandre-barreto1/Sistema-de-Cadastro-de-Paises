@@ -27,6 +27,10 @@ export class AuthGuard implements CanActivate{
   isAdministrador(): boolean{
     return this.usuarioLogado.administrador;
   }
+  logout(): void{
+    localStorage.clear();
+    this.router.navigate((['/']));
+  }
   private isAutenticado(): boolean{
     if (this.usuarioLogado === undefined){
       this.usuarioLogado = new class implements UsuarioAutentificacaoModel {

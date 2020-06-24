@@ -1,18 +1,25 @@
 <h1>
-  <mat-card-title>Sistema de Login</mat-card-title>
+  <mat-toolbar>
+    Sistema de Cadastro de Paises
+  </mat-toolbar>
 </h1>
 <mat-card>
   <form>
-    <mat-form-field>
-      <input matInput placeholder="Usuario" [(ngModel)]="usuario.login"
-             name="usuario">
+    <mat-form-field appearance="fill">
+      <mat-label>Digite seu usuario</mat-label>
+      <input matInput [(ngModel)]="usuario.login" name="usuario">
     </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder ="Senha" [(ngModel)]="usuario.senha"
+    <mat-form-field appearance="fill">
+      <mat-label>Digite sua senha</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="usuario.senha"
              name="senha">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
     </mat-form-field>
+    <button mat-raised-button (click)="login()" color="primary">
+      Entrar
+    </button>
   </form>
 </mat-card>
-<button mat-raised-button (click)="login()" color="primary">
-  Entrar
-</button>
+
